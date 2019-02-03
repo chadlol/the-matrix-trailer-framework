@@ -1,91 +1,20 @@
 /*
   DIAGNOSTIC STYLING
 */
-body {
-  background: gray;
-}
-
-* {
-  outline: 1px dotted black;
-}
 
 /************
 LAYOUT
 ************/
-body {
-  /* Center to Page   */
-  margin: 0 auto;
-  max-width: 56em;
-  padding: 1em 0;
-  
-  /* CSS Grid Layout   */
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
-  grid-gap: 1em;
-}
-
-header,
-footer {
-  grid-column: 1 / span 5;
-}
-
-main {
-  grid-column: 1 / span 3;
-}
-
-aside {
-  grid-column: span 2;
-}
-
 
 /************
 HEADER
 ************/
-/* Your Styles */
 
 
 /************
 MOVIE TRAILER w/ MEDIA ELEMENT PLAYER
 ************/
-/* Fit <video> to container */
-video {
-  max-width: 100%;
-}
-
-.mejs__currenttime, 
-.mejs__duration {
-  font-size: 18px;
-}
-
-.mejs__time-current {
-  background: tomato;
-}
-
-/************
-ACTORS
-************/
-main section { 
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
 
 /************
 FOOTER
 ************/
-footer {
-  text-align: center;
-}
-
-/************
-RWD
-************/
-@media (max-width: 700px) {
-
-  main,
-  aside {
-    grid-column: 1 / span 5;
-  }
-  
-}
