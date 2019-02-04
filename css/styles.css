@@ -1,16 +1,124 @@
+/* Colors */
 /*
-  DIAGNOSTIC STYLING
+  light green: #57A301
+  dark green: #1A3300
+  light blue: #3E7073
+  dark blue: #1F333F
+  pill red: #C22224
+  pill blue: #2274C2
+  dark: #0D0D0E
+*/
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700|Roboto:300,400,700');
+/* 
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Anonymous Pro', monospace; 
 */
 
 /************
 LAYOUT
 ************/
 
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0 2.5em;
+  background: #0D0D0E;
+}
+
 /************
 HEADER
 ************/
 
+header {
+  padding-top: 2em;
+  height: 100vh;
+  color: #57A301;
+  font-family: 'Anonymous Pro', monospace;
+}
 
+header nav a {
+  color: #57A301;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/************
+PILLS
+************/
+
+#pillSelect {
+
+  font-weight: bold;
+  width: 320px;
+  margin: 0 auto;
+  margin-top: 25vh;
+}
+
+#pillSelect h5 {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+
+#pillContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+#pillContainer a {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  width: 8em;
+  height: 8em;
+}
+
+#pillContainer a.active #Active {
+  stroke: #57A301
+}
+#pillContainer a.active #pill{
+  fill: #57A301
+}
+
+
+#pillContainer a:hover #pill {
+  fill:  #57A301;
+}
+
+#pillContainer a:hover #redPillText,
+#pillContainer a:hover #bluePillText,
+#pillContainer a.active #bluePillText,
+#pillContainer a.active #redPillText  {
+  color: #57A301;
+}
+
+#pillContainer a svg {
+  width: 100%;
+  height: 100%;
+}
+
+#redPillText,
+#bluePillText{
+  position: relative;
+  top: -3.25em;
+  font-size: 0.85em;
+}
+
+#redPillText {
+  color: #C22224;
+  transition: all 0.15s ease;
+}
+
+#bluePillText {
+  color: #2274C2;
+  transition: all 0.15s ease;
+}
 /************
 MOVIE TRAILER w/ MEDIA ELEMENT PLAYER
 ************/
