@@ -28,12 +28,18 @@ $('#pillContainer a').on('click', function(e){
         $('main').addClass('red');
         $('canvas').addClass('hide');
         $('#pillSelect h5').html('Welcome to the real world.');
+        $('html, body').animate({
+            scrollTop: $("#main").offset().top
+        }, 2000);
     }
     else{                                   //BLUE PILL
         $('header').removeClass('red');
         $('main').removeClass('red');
         $('canvas').removeClass('hide');
         $('#pillSelect h5').html('This is your last chance. After this, there is no turning back.<span class="cursor"></span>');
+        $('html, body').animate({
+            scrollTop: $("#main").offset().top
+        }, 2000);
     }
 
     $('#pillContainer a').removeClass('active');
