@@ -25,11 +25,13 @@ $('video').mediaelementplayer();
 $('#pillContainer a').on('click', function(e){
     if ( $(this).attr('id') == 'red' ){     //RED PILL
         $('header').addClass('red');
+        $('main').addClass('red');
         $('canvas').addClass('hide');
         $('#pillSelect h5').html('Welcome to the real world.');
     }
     else{                                   //BLUE PILL
         $('header').removeClass('red');
+        $('main').removeClass('red');
         $('canvas').removeClass('hide');
         $('#pillSelect h5').html('This is your last chance. After this, there is no turning back.<span class="cursor"></span>');
     }
