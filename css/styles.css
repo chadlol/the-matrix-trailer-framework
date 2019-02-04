@@ -28,13 +28,35 @@ LAYOUT
 body {
   
   background: url('../img/header.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 900px) {
+  main {
+    flex-direction: row;
+  }
+  #left,
+  #right {
+    width:50vw;
+    height:100vh;
+  }
+}
+
 
 
 canvas {
   z-index: -1;
   position: absolute;
   transition: opacity 0.5s ease;
+  width: 100%;
+  height: 100vh;
 }
 
 /************
@@ -45,13 +67,14 @@ HEADER
 
 
 header {
-  background-image: linear-gradient(-180deg, rgba(13,13,14,0.90) 6%, #0D0D0E 100%);
+  background-image: linear-gradient(-180deg, rgba(13,13,14,0.80) 6%, #0D0D0E 100%);
   color: #57A301;
   padding: 0 2.5em;
   padding-top: 2em;
   height: 100vh;
   font-family: 'Anonymous Pro', monospace;
   transition: color 0.5s ease;
+  width: 100%;
 }
 
 header nav a {
@@ -177,8 +200,64 @@ header.red #pillContainer a.active #redPillText  {
   color: #2274C2;
 }
 /************
-MOVIE TRAILER w/ MEDIA ELEMENT PLAYER
+MAIN
 ************/
+
+main {
+  background: url('../img/red.jpg');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  font-family: 'Anonymous Pro', monospace; 
+}
+
+#left,
+#right {
+  color: #57A301;
+  padding: 0 2.5em;
+}
+
+#left {
+  background:#0D0D0E;
+}
+
+#left h1 {
+  text-transform: uppercase;
+  font-size: 5em;
+  margin: 0;
+}
+
+#left h3,
+#right h3 {
+  text-transform: uppercase;
+  font-size: 1.25em;
+  margin: 1em 0;
+}
+
+#left p {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.2;
+}
+
+#right {
+  background-image: linear-gradient(-180deg, #0D0D0E 0%, rgba(26,26,28,0.70) 100%);
+}
+
+#right ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#right li {
+  margin: 0.25em 0 ;
+}
+
+#right #trailer {
+  margin: 3em 0;
+}
+
 
 /************
 FOOTER
