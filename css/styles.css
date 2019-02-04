@@ -295,6 +295,16 @@ main.red #right {
   margin-bottom: 1em;
 }
 
+main.red #buttons a {
+  color: #1F333F;
+  background: #3E7073;
+}
+
+main.red #buttons a:hover {
+  color: #3E7073;
+  background: #000;
+}
+
 #buttons a:hover {
   background: #1A3300;
 }

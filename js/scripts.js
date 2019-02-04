@@ -30,7 +30,7 @@ $('#pillContainer a').on('click', function(e){
         $('#pillSelect h5').html('Welcome to the real world.');
         $('html, body').animate({
             scrollTop: $("#main").offset().top
-        }, 2000);
+        }, 4000);
     }
     else{                                   //BLUE PILL
         $('header').removeClass('red');
