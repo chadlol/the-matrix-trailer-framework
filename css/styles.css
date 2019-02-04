@@ -260,8 +260,22 @@ main {
 
 
 /************
-FOOTER
+VIDEO
 ************/
+
+.mejs__overlay-button {
+  background: url('../img/play.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+.mejs__overlay:hover>.mejs__overlay-button {
+  background-position: center;
+}
+
+.mejs__controls {
+  display: none;
+}
 
 /************
 UTILITY
