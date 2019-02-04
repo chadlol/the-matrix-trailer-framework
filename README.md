@@ -9,3 +9,4 @@ _Movie Trailer_ framework using _Atomic Design_ process (Winter 2019).
 * [Lettering JS](http://letteringjs.com/)
 * [Media Element Player](https://www.mediaelementjs.com/)
 * [Layout Template](https://codepen.io/geoffgraham/pen/jaqWMJ)
+* [Matrix rain animation](https://codepen.io/yaclive/pen/EayLYO)

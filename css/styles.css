@@ -27,13 +27,14 @@ LAYOUT
 
 body {
   
-  /* background: #0D0D0E; */
+  background: url('../img/header.png');
 }
 
 
 canvas {
   z-index: -1;
   position: absolute;
+  transition: opacity 0.5s ease;
 }
 
 /************
@@ -44,14 +45,13 @@ HEADER
 
 
 header {
-  
   background-image: linear-gradient(-180deg, rgba(13,13,14,0.90) 6%, #0D0D0E 100%);
   color: #57A301;
   padding: 0 2.5em;
   padding-top: 2em;
-  
   height: 100vh;
   font-family: 'Anonymous Pro', monospace;
+  transition: color 0.5s ease;
 }
 
 header nav a {
@@ -59,6 +59,16 @@ header nav a {
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
+  transition: color 0.5s ease;
+}
+
+header.red {
+  background-image: linear-gradient(-180deg, rgba(13,13,14,0.65) 6%, #0D0D0E 100%);
+  color: #3E7073;
+}
+
+header.red nav a {
+  color: #3E7073;
 }
 
 /************
@@ -77,6 +87,23 @@ PILLS
   display: block;
   margin: 0 auto;
   margin-bottom: 2em;
+  text-align: left;
+  font-size: 1em;
+  line-height: 1em;
+}
+
+#pillSelect h5 span.cursor{
+  background-color: #57A301;
+  position: absolute;
+  height: 1em;
+  width: 0.5em;
+  animation: blink-animation 0.75s steps(5, start) infinite;
+  -webkit-animation: blink-animation 0.75s steps(5, start) infinite;
+}
+
+header.red #pillSelect h5 {
+ text-align: center;
+ line-height: 2em;
 }
 
 #pillContainer {
@@ -101,9 +128,19 @@ PILLS
   stroke: #57A301;
 }
 
+header.red #pillContainer a.active #Active {
+  stroke: #3E7073;
+}
+
+
 #pillContainer a:hover #pill,
 #pillContainer a.active #pill {
   fill:  #57A301;
+}
+
+header.red #pillContainer a:hover #pill,
+header.red #pillContainer a.active #pill {
+  fill:  #3E7073
 }
 
 #pillContainer a:hover #redPillText,
@@ -111,6 +148,13 @@ PILLS
 #pillContainer a.active #bluePillText,
 #pillContainer a.active #redPillText  {
   color: #57A301;
+}
+
+header.red #pillContainer a:hover #redPillText,
+header.red #pillContainer a:hover #bluePillText,
+header.red #pillContainer a.active #bluePillText,
+header.red #pillContainer a.active #redPillText  {
+  color: #3E7073
 }
 
 #pillContainer a svg {
@@ -139,3 +183,26 @@ MOVIE TRAILER w/ MEDIA ELEMENT PLAYER
 /************
 FOOTER
 ************/
+
+/************
+UTILITY
+************/
+
+.hide {
+  opacity: 0;
+}
+
+/************
+ANIMATIONS
+************/
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
