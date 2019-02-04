@@ -20,6 +20,8 @@ console.log('OK');
 
 $('video').mediaelementplayer();
 
+
+// Pill Selection
 $('#pillContainer a').on('click', function(e){
     $('#pillContainer a').removeClass('active');
     $(this).addClass('active');
